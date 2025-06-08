@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted, reactive } from 'vue'
-import Card from '@/Components/ui/card/Card.vue'
+import Card from '@/components/ui/card/Card.vue'
 
 
 const skills = [

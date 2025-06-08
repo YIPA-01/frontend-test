@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue';
 import { useApi } from '../../composables/useApi.js';
 import GuestLayout from '../../Layouts/GuestLayout.vue';
-import EducationTimeline from '../../Components/guest/education/EducationTimeline.vue';
+import EducationTimeline from '../../components/guest/education/EducationTimeline.vue';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components';
 
 const api = useApi();
