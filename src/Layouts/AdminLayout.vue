@@ -14,7 +14,7 @@ import {
 } from '@/components';
 import Toast from '../components/Toast.vue';
 import { ToastProvider } from '../components/ui/toast';
-import { useToast } from '../composables/useToast';
+import { useToast } from '../composables/useToast.js';
 
 const showingNavigationDropdown = ref(false);
 const route = useRoute();

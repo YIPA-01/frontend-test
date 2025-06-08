@@ -1,5 +1,5 @@
 <script setup>
-import { useToast } from '@/Composables/useToast';
+import { useToast } from '@/composables/useToast.js';
 import { TransitionRoot } from '@headlessui/vue';
 import { computed } from 'vue';
 

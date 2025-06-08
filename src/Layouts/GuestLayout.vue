@@ -4,7 +4,7 @@ import MobileNav from '../components/guest/navigation/MobileNav.vue'
 import SocialLinks from '../components/guest/SocialLinks.vue'
 import { Button } from '@/components'
 import { ToastProvider, Toast } from '../components/ui/toast'
-import { useToast } from '../composables/useToast'
+import { useToast } from '../composables/useToast.js'
 import { onMounted } from 'vue'
 
 const { messages, showSuccess, showError } = useToast()
