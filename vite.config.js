@@ -4,7 +4,7 @@ import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [vue()],
-  base: '/reda-yahyani-portfolio/frontend-test/', // Updated to match actual GitHub Pages URL
+  base: '/frontend-test/', // Correct base path for GitHub Pages repository
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
