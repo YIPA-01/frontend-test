@@ -25,7 +25,10 @@ jobs:
       
     - name: Build
       run: npm run build
-      
+      env:
+        VITE_USE_MOCK_DATA: true
+        VITE_APP_ENV: production
+        
     - name: Setup Pages
       uses: actions/configure-pages@v4
       
