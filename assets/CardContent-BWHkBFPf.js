@@ -1,0 +1,1 @@
+import{c as r}from"./useToast-z_lxE8aI.js";import{d as t,o,r as n,n as c,u as l}from"./main-C-AdL_Rw.js";const d={__name:"CardContent",props:{class:{type:String,default:""}},setup(s){const a=s;return(e,p)=>(o(),t("div",{class:c(l(r)("p-6 pt-0",a.class))},[n(e.$slots,"default")],2))}};export{d as _};
