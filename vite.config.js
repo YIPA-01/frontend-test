@@ -2,15 +2,9 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: '/portfolio/',
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src')
-    }
-  },
+  base: '/portfolio/', // Base path for GitHub Pages deployment
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
@@ -18,6 +12,11 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html')
       }
+    }
+  },
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src')
     }
   },
   server: {

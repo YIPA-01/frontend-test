@@ -6,7 +6,7 @@ import './app.css'
 
 // Create router with all routes
 const router = createRouter({
-  history: createWebHistory('/frontend-test/'),
+  history: createWebHistory('/portfolio/'),
   routes: [
     // Guest routes
     { 
