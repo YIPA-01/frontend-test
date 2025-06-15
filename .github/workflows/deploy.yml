@@ -41,6 +41,7 @@ jobs:
       env:
         VITE_USE_MOCK_DATA: true
         VITE_APP_ENV: production
+        VITE_API_BASE_URL: https://yipa-01.github.io/portfolio/api
         
     - name: Setup Pages
       uses: actions/configure-pages@v4
