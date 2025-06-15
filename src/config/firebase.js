@@ -9,6 +9,8 @@ export const firebaseConfig = {
 }
 
 // API base URL - use Firebase Functions URL in production
-export const API_BASE_URL = import.meta.env.PROD 
-  ? 'https://reda-yahyani-portfolio-default-rtdb.firebaseio.com/api' // Replace with your Firebase Functions URL
-  : 'http://localhost:5001/reda-yahyani-portfolio/us-central1/api' // Local development URL 
+const apiUrl = import.meta.env.PROD
+  ? 'https://yipa-01.github.io/frontend-test/api' // Production API URL
+  : 'http://localhost:5001/frontend-test/us-central1/api' // Local development URL
+
+export const API_BASE_URL = apiUrl 
