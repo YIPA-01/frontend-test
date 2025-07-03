@@ -1,6 +1,6 @@
 <script setup>
-import { ref, onMounted } from 'vue';
-import { useApi } from '../../composables/useApi.js';
+import { ref } from 'vue';
+import { mockProjects, mockSkills, mockEducation } from '../../data/mockData.js';
 import GuestLayout from '../../Layouts/GuestLayout.vue';
 
 // Import section components
@@ -11,35 +11,11 @@ import SkillsSection from '../../components/guest/home/SkillsSection.vue';
 import ProjectsSection from '../../components/guest/home/ProjectsSection.vue';
 import ContactSection from '../../components/guest/home/ContactSection.vue';
 
-const api = useApi();
+// Use static data from mockData.js instead of API calls
+const projects = ref(mockProjects.filter(project => project.featured));
+const skills = ref(mockSkills);
+const education = ref(mockEducation);
 const loading = ref(false);
-const projects = ref([]);
-const skills = ref([]);
-const education = ref([]);
-
-const loadHomeData = async () => {
-    loading.value = true;
-    try {
-        const [projectsData, skillsData, educationData] = await Promise.all([
-            api.get('/projects').catch(() => ({ data: [] })),
-            api.get('/skills').catch(() => ({ data: [] })),
-            api.get('/education').catch(() => ({ data: [] }))
-        ]);
-        
-        projects.value = projectsData.data;
-        skills.value = skillsData.data;
-        education.value = educationData.data;
-    } catch (error) {
-        console.error('Failed to load home data:', error);
-        // Fallback to empty arrays - page will still render
-    } finally {
-        loading.value = false;
-    }
-};
-
-onMounted(() => {
-    loadHomeData();
-});
 </script>
 
 <template>

@@ -43,6 +43,13 @@ jobs:
         VITE_APP_ENV: production
         VITE_API_BASE_URL: https://yipa-01.github.io/portfolio/api
         
+    - name: List build output
+      run: |
+        echo "Build output contents:"
+        ls -la dist/
+        echo "Assets directory:"
+        ls -la dist/assets/ || echo "No assets directory found"
+        
     - name: Setup Pages
       uses: actions/configure-pages@v4
       

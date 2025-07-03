@@ -11,8 +11,18 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html')
+      },
+      output: {
+        // Ensure consistent chunk naming
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
       }
-    }
+    },
+    // Ensure source maps are generated for debugging
+    sourcemap: false,
+    // Optimize chunk splitting
+    chunkSizeWarningLimit: 1000
   },
   resolve: {
     alias: {

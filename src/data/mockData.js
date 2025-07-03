@@ -1,26 +1,79 @@
 // Import project images
-import erpImage from '../assets/images/projects/ERP/Screenshot 2025-05-04 at 14.57.21.png'
+
 import dmcImage from '../assets/images/projects/DMC/Screenshot 2025-05-04 at 14.53.53.png'
+import dmcImage1 from '../assets/images/projects/DMC/Screenshot 2025-07-03 at 16.52.34.png'
+import dmcImage2 from '../assets/images/projects/DMC/Screenshot 2025-07-03 at 16.52.38.png' 
+import dmcImage3 from '../assets/images/projects/DMC/Screenshot 2025-07-03 at 16.52.51.png'
+import dmcImage4 from '../assets/images/projects/DMC/Screenshot 2025-07-03 at 16.53.00.png'
+import dmcImage5 from '../assets/images/projects/DMC/Screenshot 2025-07-03 at 16.53.42.png'
+
 import aopImage from '../assets/images/projects/AOP/Screenshot 2025-01-28 at 19.26.25.png'
+import aopImage1 from '../assets/images/projects/AOP/Screenshot 2025-07-03 at 16.35.28.png'
+import aopImage2 from '../assets/images/projects/AOP/Screenshot 2025-07-03 at 16.36.05.png'
+import aopImage3 from '../assets/images/projects/AOP/Screenshot 2025-07-03 at 16.37.14.png'
+import aopImage4 from '../assets/images/projects/AOP/Screenshot 2025-07-03 at 16.38.04.png'
+import cdmImage1 from '../assets/images/projects/CDM/Screenshot 2025-07-02 at 22.05.57.png'
+import cdmImage2 from '../assets/images/projects/CDM/Screenshot 2025-07-02 at 22.06.11.png'
+import cdmImage3 from '../assets/images/projects/CDM/Screenshot 2025-07-02 at 22.07.44.png'
+import hlpImage from '../assets/images/HLP/Screenshot 2025-07-03 at 16.20.03.png'
+import hlpImage2 from '../assets/images/HLP/Screenshot 2025-07-03 at 16.20.33.png'
+import hlpImage3 from '../assets/images/HLP/Screenshot 2025-07-03 at 16.20.33.png'
 
 // Mock data for development
 export const mockProjects = [
   {
-    id: 1,
-    title: "ERP Management System",
-    description: "A comprehensive Enterprise Resource Planning system built with modern web technologies for efficient business management",
-    technologies: ["Vue.js", "Laravel", "MySQL", "Tailwind CSS","Filament"],
+    id:5,
+    title:"Dar Imim Hostel",
+    description:"A comprehensive Landing Page for a hostel to manage their customers, orders, and other activities",
+    technologies:["React.js","Shadcn UI","Tailwind CSS"],
+    featured:true,
+    images:[
+      {
+        id:7,
+        url:hlpImage,
+        alt:"Landing Page for Dar Imim Hostel",
+      },
+      {
+        id:8,
+        url:hlpImage2,
+        alt:"Dar Imim Hostel Landing Page"
+      },
+      {
+        id:9,
+        url:hlpImage3,
+        alt:"Dar Imim Hostel Landing Page"
+      }
+    ],
+    github_url:"https://github.com/YIPA-01/dar-imim",
+    live_url:"https://yipa-01.github.io/dar-imim/",
+    created_at:"2025-07-03"
+  },
+  {
+    id: 4,
+    title: "La cuchina de mama",
+    description: "A comprehensive Landing Page for a restaurant to manage their customers, orders, and other activities",
+    technologies: ["React.js", "Shadcn UI", "Tailwind CSS"],
     featured: true,
     images: [
       {
-        id: 1,
-        url: erpImage,
-        alt: "ERP Management System Dashboard"
+        id: 4,
+        url: cdmImage3,
+        alt: "CDM Dashboard Overview"
+      },
+      {
+        id: 5,
+        url: cdmImage2,
+        alt: "CDM Analytics Interface"
+      },
+      {
+        id: 6,
+        url: cdmImage1,
+        alt: "CDM Data Management"
       }
     ],
-    github_url: "https://github.com/redayahyani/erp-system",
-    live_url: "https://erp-demo.example.com",
-    created_at: "2025-05-04"
+    github_url: "https://github.com/YIPA-01/la-cuchina-de-mama",
+    live_url: "https://yipa-01.github.io/la-cuchina-de-mama",
+    created_at: "2023-07-12"
   },
   {
     id: 2,
@@ -33,29 +86,75 @@ export const mockProjects = [
         id: 2,
         url: dmcImage,
         alt: "DMC Platform Interface"
-      }
+      },
+      {
+        id: 3,
+        url: dmcImage1,
+        alt: "DMC Platform Interface"
+      },
+      {
+        id: 4,
+        url: dmcImage2,
+        alt: "DMC Platform Interface"
+      },
+      {
+        id: 5,
+        url: dmcImage3,
+        alt: "DMC Platform Interface"
+      },
+      {
+        id: 6,
+        url: dmcImage4,
+        alt: "DMC Platform Interface"
+      },
+      {
+        id: 7,
+        url: dmcImage5,
+      } 
     ],
-    github_url: "https://github.com/redayahyani/dmc-platform",
-    live_url: "https://dmc-demo.example.com",
-    created_at: "2025-05-04"
+    github_url: "https://github.com/YIPA-01/pharmacy-management-system",
+    live_url: null,
+    created_at: "2024-05-04"
   },
   {
     id: 3,
-    title: "Academic Orientation Platform",
+    title: "Gen.Z",
     description: "Academic Orientation Platform for students to get information about the university and the courses they offer",
     technologies: ["Vue.js", "Laravel", "PostgreSQL", "Chart.js","Shadcn UI"],
-    featured: false,
+    featured: true,
     images: [
       {
         id: 3,
         url: aopImage,
         alt: "AOP Analytics Dashboard"
+      },
+      {
+        id: 4,
+        url: aopImage1,
+        alt: "AOP Analytics Dashboard"
+      },
+      {
+        id: 5,
+        url: aopImage2,
+        alt: "AOP Analytics Dashboard"
+      },
+      {
+        id: 6,
+        url: aopImage3,
+        alt: "AOP Analytics Dashboard"
+      },
+      {
+        id: 7,
+        url: aopImage4,
+        alt: "AOP Analytics Dashboard"
       }
     ],
-    github_url: "https://github.com/redayahyani/aop-dashboard",
-    live_url: "https://aop-demo.example.com",
-    created_at: "2025-01-28"
-  }
+    github_url: "https://github.com/YIPA-01/GenZ-Platform",
+    live_url: null,
+    created_at: "2024-06-28"
+  },
+
+
 ];
 
 export const mockSkills = [

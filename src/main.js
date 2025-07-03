@@ -1,12 +1,12 @@
 import { createApp } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import { useAuth } from './composables/useAuth.js'
 import App from './App.vue'
 import './app.css'
 
 // Create router with all routes
 const router = createRouter({
-  history: createWebHistory('/portfolio/'),
+  history: createWebHashHistory(),
   routes: [
     // Guest routes
     { 
@@ -173,15 +173,15 @@ const router = createRouter({
 
 // Route guards
 router.beforeEach(async (to, from, next) => {
-  console.log('Route guard triggered:', { to: to.path, from: from.path });
+  // console.log('Route guard triggered:', { to: to.path, from: from.path });
   
   const { isAuthenticated, isAdmin, fetchUser } = useAuth()
   
-  console.log('Auth state:', { 
-    isAuthenticated: isAuthenticated.value, 
-    isAdmin: isAdmin.value,
-    hasToken: !!localStorage.getItem('auth_token')
-  });
+  // console.log('Auth state:', { 
+  //   isAuthenticated: isAuthenticated.value, 
+  //   isAdmin: isAdmin.value,
+  //   hasToken: !!localStorage.getItem('auth_token')
+  // });
   
   // Try to fetch user if we have a token but no user data
   if (localStorage.getItem('auth_token') && !isAuthenticated.value) {
@@ -223,7 +223,7 @@ router.beforeEach(async (to, from, next) => {
     document.title = to.meta.title
   }
   
-  console.log('Route guard passed, proceeding to:', to.path);
+  // console.log('Route guard passed, proceeding to:', to.path);
   next()
 })
 

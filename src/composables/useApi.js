@@ -12,11 +12,7 @@ import {
 // Check if we should use mock data
 const useMockData = import.meta.env.VITE_USE_MOCK_DATA === 'true'
 
-console.log('Environment variables:', {
-  VITE_USE_MOCK_DATA: import.meta.env.VITE_USE_MOCK_DATA,
-  VITE_API_BASE_URL: import.meta.env.VITE_API_BASE_URL,
-  useMockData: useMockData
-});
+
 
 console.log('API Configuration:', {
   'Using Mock Data': useMockData,
@@ -91,7 +87,7 @@ const mockApi = {
     
     switch (url) {
       case '/contact':
-        console.log('Mock contact form submission:', data)
+        // console.log('Mock contact form submission:', data)
         return { data: { message: 'Message sent successfully!' } }
       case '/login':
         // Mock login
