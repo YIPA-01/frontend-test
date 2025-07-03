@@ -1,0 +1,1 @@
+import{c as t}from"./useToast-BZC8Nx5n.js";import{d as a,o,r as n,n as c,u as l}from"./main-B5BZU6_N.js";const i={__name:"CardFooter",props:{class:{type:String,default:""}},setup(s){const e=s;return(r,p)=>(o(),a("div",{class:c(l(t)("flex items-center p-6 pt-0",e.class))},[n(r.$slots,"default")],2))}};export{i as _};
